@@ -88,4 +88,5 @@ backup:
     type: git
     theme: next
     repository:
-       github: git@github.com:ydeng11/Blog.git, origin/master
+       github: git@github.com:ydeng11/Blog.git,master
+       gitcafe: git@gitcafe.com:ydeng11/Blog.git,master
