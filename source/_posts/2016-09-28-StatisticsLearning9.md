@@ -44,7 +44,7 @@ Ex3. $x\_1,x\_2,\dots,x\_n \overset{\text{i.i.d}}\sim Gamma(\alpha, \beta)$, whe
 
 $\begin{equation}\begin{split}
  f(x\_1,x\_2,\dots,x\_n|\alpha, \beta) & = \prod\_{i=1}^{n}\frac{1}{\beta^{\alpha}\Gamma (\alpha)}x\_i^{\alpha-1}e^{-x\_i/\beta} \\\\ 
-& =\underbrace{\frac{1}{\beta^{nx}(\Gamma(\alpha))^n}(\prod\_{i=1}{n}x\_i)^{\alpha-1}e^{-\sum x\_i /\beta}I(\alpha>0)I(\beta>0)}\_{g(\prod x\_i, \sum x\_i, \alpha, \beta)}\cdot \underbrace{1}\_{h(x\_1,x\_2,\dots,x\_n)}
+& =\underbrace{\frac{1}{\beta^{n\alpha}(\Gamma(\alpha))^n}(\prod\_{i=1}{n}x\_i)^{\alpha-1}e^{-\sum x\_i /\beta}I(\alpha>0)I(\beta>0)}\_{g(\prod x\_i, \sum x\_i, \alpha, \beta)}\cdot \underbrace{1}\_{h(x\_1,x\_2,\dots,x\_n)}
 \end{split}\end{equation}$
 
 So, $\sum x\_i$, $\prod x\_i$ are sufficient for $\alpha$, $\beta$.

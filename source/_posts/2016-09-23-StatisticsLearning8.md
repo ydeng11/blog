@@ -29,7 +29,7 @@ Ex. Bin(n,p)
     - check boundry points
 
 Ex. $x\_1,x\_2...x\_n\overset{\text{i.i.d}}\sim Bern(p)$, parameter space: $0 \leq p \leq 1$
-$L(P|x\_1,x\_2...x\_n)=f(x\_1,x\_2...x\_n|p)\overset{\text{i.i.d}}=\prod\_{i=1}^n f(x\_i|p)$
+$L(p|x\_1,x\_2...x\_n)=f(x\_1,x\_2...x\_n|p)\overset{\text{i.i.d}}=\prod\_{i=1}^n f(x\_i|p)$
 $= \prod\_{i=1}^n \underbrace {p^{x\_i}(1-p)^{1-x\_i}}\_{Bin(1,p), PMF} = p^{\sum x\_i}(1-p)^{n-\sum x\_i}$
 $\Rightarrow L(0)=L(1)=0$, wherever $\sum x\_i\neq0$, $\sum x\_i \neq n$
 **Transform to log-likelihood function**
