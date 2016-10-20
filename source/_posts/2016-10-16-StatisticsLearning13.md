@@ -23,9 +23,9 @@ Two ways to construct CI:
 
 Hence, $\frac{\hat \theta - \theta}{\sqrt{1/I\_n(\theta)}} \overset{\text{approx}}\sim N(0,1)$, $P(-1.96 \leq \frac{\hat \theta - \theta}{\sqrt{1/I\_n(\theta)}} \leq 1.96) = 0.95$
 Equivalently, $\frac{\hat \theta - \theta}{\sqrt{1/I\_n(\theta)}} \geq -1.96 \Rightarrow \hat \theta - \theta \geq -1.96\sqrt{1/I\_n (\theta)} \Rightarrow \theta \leq \hat \theta + 1.96\sqrt{1/I\_n(\theta)}$
-$\Rightarrow p(\hat \theta - 1.96\sqrt{1/I\_n(\theta)} \leq \theta \leq \hat \theta + 1.96\sqrt{1/I\_n(\theta)})$ is an approximate $95\%$ CI for $\hat \theta(MLE)$ when $n$ is large, this can also be written as $\hat \theta \stackrel{+}-1.96\sqrt{-\frac{[g(\hat \theta)]^2}{l''(\hat \theta)}}$.
+$\Rightarrow p(\hat \theta - 1.96\sqrt{1/I\_n(\theta)} \leq \theta \leq \hat \theta + 1.96\sqrt{1/I\_n(\theta)})$ is an approximate $95\%$ CI for $\hat \theta(MLE)$ when $n$ is large, this can also be written as $\hat \theta \pm 1.96\sqrt{-\frac{[g(\hat \theta)]^2}{l''(\hat \theta)}}$.
 
-For binomial odds, $\frac{p}{1-p}$, $\hat Var(\frac{\hat p}{1-\hat p})=\frac{\hat p}{n(1-\hat p)^3}$, so approximate $95\%$ CI of the odds is $\frac{\hat p}{1-\hat p}\stackrel{+}-1.96\sqrt{\frac{\hat p}{n(1-\hat p)^3}}$.
+For binomial odds, $\frac{p}{1-p}$, $\hat Var(\frac{\hat p}{1-\hat p})=\frac{\hat p}{n(1-\hat p)^3}$, so approximate $95\%$ CI of the odds is $\frac{\hat p}{1-\hat p}\pm 1.96\sqrt{\frac{\hat p}{n(1-\hat p)^3}}$.
 
 2. Exact CIs based on pivots
 Definition: A pivot is a function, $Q(\theta, x\_1,x\_2,\dots,x\_n)$ whose distribution does not depend on $\theta$.
@@ -53,3 +53,23 @@ he 0.975 quantiles satisfies $0.975 = \int\_0^{a\_1}e^{-q}dq = 1-e^{-a\_2}\Right
 so $p(0.0253\leq \frac{x\_1}{\beta} \leq 3.69)=0.95$
 $\Rightarrow p(\frac{x\_1}{3.69}\leq \beta \frac{x\_1}{0.0253})=0.95$
 $\Rightarrow CI = (\frac{x\_1}{3.69}, \frac{x\_1}{0.0253})$
+
+Ex. $x\_1,x\_2,\dots,x\_n \overset{\text{iid}}\sim Expo(\beta)$, $\frac{x\_i}{\beta}\sim Expo(1)$
+a) show that $Q(\beta,x\_1,x\_2,\dots,x\_n)=\frac{\sum x\_i}{\beta}$ is a pivot. 
+We know $\frac{x\_1}{\beta}, \frac{x\_2}{\beta},\dots, \frac{x\_n}{\beta} \overset{\text{iid}}\sim Expo(1)$ and so $\frac{\sum x\_i}{\beta}\sim Gamma(n,1)$ (*Hint: MGF*), which is a pivot since it doesn't depend on $\beta$.
+
+b) construct a pivot CI for $\beta$ when $c\_1$ and $c\_2$ satisfy $p(c\_1 \leq \frac{\sum x\_1}{\beta} \leq c\_2)$
+$$p(c\_1 \leq \frac{\sum x\_1}{\beta} \leq c\_2) = p(\frac{\sum x\_i}{c\_2}\leq \beta \leq \frac{\sum x\_i}{c\_1})$$
+so $(\frac{\sum x\_i}{c\_2}, \frac{\sum x\_i}{c\_1})$ is an exact 95% CI for $\beta$.
+
+Two famours pivots, where  $x\_1,x\_2,\dots,x\_n \overset{\text{iid}}\sim N(\mu,\sigma^2)$ with unkonwn $\mu, \sigma^2$.
+1) $\frac{\bar x - \mu}{s/\sqrt{n}} \sim t\_{n-1}$ is a pivot
+so if we choose $c\_1$ and $c\_2$ such that $p(c\_1 \leq \frac{\bar x - \mu}{s/\sqrt{n}} \leq c\_2)=1-\alpha$
+then we get a $1-\alpha$ exact CI for $\mu$
+$$p(c\_1 \leq \frac{\bar x - \mu}{s/\sqrt{n}} \leq c\_2)=1-\alpha \Rightarrow p(-\frac{c\_2S}{\sqrt{n}} \leq \mu \leq -\frac{c\_1S}{\sqrt{n}}) = 1-\alpha$$
+Usually, we choose $c\_1 = \frac{\alpha}{2}$ quantile of $t\_{n-1}$ and $c\_2 = 1- \frac{\alpha}{2}$ quantile of $t\_{n-1}$
+Denote  $c\_2 = t\_{n-1,1-\frac{\alpha}{2}}$ and notice that  $c\_1 = -c\_2$, since $t$ is symmetric
+So exact $1-\alpha$ CI for $\mu$ is $(\bar x - t\_{n-1,1-\frac{\alpha}{2}}\cdot \frac{S}{\sqrt{n}}, \bar x + t\_{n-1,1-\frac{\alpha}{2}}\cdot \frac{S}{\sqrt{n}})$ or $\bar x \pm  t\_{n-1,1-\frac{\alpha}{2}}\cdot \frac{S}{\sqrt{n}}$, whic is the t-based CI for $\mu$.
+
+2) $\frac{(n-1)S^2}{\sigma^2}\sim\chi\_{n-1}^2$ is a pivot, so if we choose $c\_1$, $c\_2$ such that $p(c\_1 \leq \frac{(n-1)S^2}{\sigma^2} \leq c\_2) = 1-\alpha$, then we get the $1-\alpha$ exact CI for $\sigma^2$
+$p(\frac{(n-1)S^2}{c\_1}\leq \sigma^2 \leq \frac{(n-1)S^2}{c\_2}) = 1-\alpha$
