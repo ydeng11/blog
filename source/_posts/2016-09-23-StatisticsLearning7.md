@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Theory Notes (7)
+---
+title: Fundamental Statistics Theory Notes (7)
 date: 2016-09-23 10:25:39
 tags:
- - Statistics
  - Probability
-categories: 统计
+categories: Statistics
 ---
 
 > Estimating parameters from a random sample

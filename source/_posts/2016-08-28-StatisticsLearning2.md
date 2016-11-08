@@ -1,13 +1,12 @@
-ï»¿---
-title: Foundamental Statistics Theory Notes (2)
+---
+title: Fundamental Statistics Theory Notes (2)
 date: 2016-08-26 17:54:48
 tags:
- - Statistics
  - Probability
-categories: ç»Ÿè®¡
+categories: Statistics
 ---
 
-> ç»§ç»­æ‰“æ¡©
+> ¼ÌÐø´ò×®
 
 ### MGF(Moment Generating Function)
 

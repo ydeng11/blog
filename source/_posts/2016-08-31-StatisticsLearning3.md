@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Theory Notes (3)
+---
+title: Fundamental Statistics Theory Notes (3)
 date: 2016-08-31 15:44:17
 tags:
- - Statistics
  - Probability
-categories: 统计
+categories: Statistics
 ---
 
 > Statistics is the function of everything.

@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Theory Notes (6)
+---
+title: Fundamental Statistics Theory Notes (6)
 date: 2016-09-14 14:53:59
 tags:
- - Statistics
  - Probability
-categories: 统计
+categories: Statistics
 ---
 
 > Central Limit Theorem (CLT)

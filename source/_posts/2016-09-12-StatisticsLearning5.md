@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Theory Notes (5)
+---
+title: Fundamental Statistics Theory Notes (5)
 date: 2016-09-12 10:51:22
 tags:
- - Statistics
  - Probability
-categories: 统计
+categories: Statistics
 ---
 
 > t-distribution & F-distribution

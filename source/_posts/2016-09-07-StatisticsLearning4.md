@@ -1,13 +1,12 @@
-ï»¿---
-title: Foundamental Statistics Theory Notes (4)
+---
+title: Fundamental Statistics Theory Notes (4)
 date: 2016-09-07 15:05:20
 tags:
- - Statistics
  - Probability
-categories: ç»Ÿè®¡
+categories: Statistics
 ---
 
-> å¿˜äº†å¸¦é¼ æ ‡ï¼Œæ‚²ä¼¤è„¸
+> ÍüÁË´øÊó±ê£¬±¯ÉËÁ³
 
 Continue:
 Let $x\_1,x\_2...,x\_n$ have $E(x\_i)=\mu, Var(x\_i)=\sigma^2$ and are independent with each other. <!---more--->

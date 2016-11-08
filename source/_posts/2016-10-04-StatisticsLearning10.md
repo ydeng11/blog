@@ -1,16 +1,12 @@
-﻿---
+---
 
-title: Foundamental Statistics Learning Note (10)
+title: Fundamental Statistics Learning Note (10)
 
 date: 2016-10-04 21:47:06
 
 tags:
-
  - Probability
-
- - Statistics
-
-categories: 统计
+categories: Statistics
 
 ---
 
@@ -56,10 +52,10 @@ recall $MLE$ :  $\hat \mu = \bar x$, $\hat {\sigma^2} = \frac{n-1}{n}S^2$
 
 
 To get $\hat \mu$: 
-$$E(\mu)=E(\bar x)=\mu$$
+$$E(\hat\mu)=E(\bar x)=\mu$$
 so $\hat \mu$ is an unbiased estimator of $\mu$.
 $$Var(\hat \mu)= Var(\bar x)=\frac{\sigma^2}{n}$$
-so $$MSE(\hat \mu)=Var(\hat \theta)=\frac{\sigma^2}{n}$$
+so $$MSE(\hat \mu)=Var(\hat \mu)=\frac{\sigma^2}{n}$$
 and it is consistent since $Bias=0$, $\lim\_{n \to \infty}\frac{\sigma^2}{n}=0$
 
 
@@ -135,7 +131,7 @@ Bias(\hat \theta)&=\frac{n}{n+1}\theta-\theta \\\\
 \end{split}\end{equation}$$
 
 $$\begin{equation}\begin{split}
-E(\mu^2)& = \int\_0^\theta \mu^2 \frac{n}{\theta^n}\mu^{n-1}d\mu\\\\
+E(U^2)& = \int\_0^\theta \mu^2 \frac{n}{\theta^n}\mu^{n-1}d\mu\\\\
 &=\frac{n}{\theta^n}\frac{\mu^{n+1}}{n+2}|\_0^\theta \\\\
 &=\frac{n}{n+2}\theta^2
 \end{split}\end{equation}$$
@@ -160,7 +156,7 @@ $\hat \theta$ is consistent since $\lim\_{n \to \infty}-\frac{\theta}{n+1}=0$, $
 Ex. $x\_1, x\_2, \dots, x\_n \overset{\text{i.i.d}}\sim \text{uniform}(0, \theta)$, i.e. $f(x|\theta)=\frac{1}{\theta}$ for $0<x<\theta$
 $\hat \theta\_1 = \frac{n+1}{n}max \lbrace x\_i \rbrace$ is unbiased estimator of $\theta$.
 $\hat \theta\_2 = 2 \bar x $ is also unbiased since $E(x\_i)=\frac{\theta}{2}$, $Var(x\_i)=\frac{\theta^2}{12}$.
-probability pf uniform distribution:
+probability of uniform distribution:
 $E(\bar x)=\frac{\theta}{2}, Var(\bar x)=\frac{\theta^2}{12}$
 And so $E(\hat \theta\_2)=E(2\bar x)=2E(\bar x)=2\cdot \frac{\theta}{2}=\theta$, which is unbiased.
 if $\hat \theta\_1$ or $\hat \theta\_2$ more efficient?

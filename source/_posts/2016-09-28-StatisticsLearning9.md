@@ -1,16 +1,15 @@
-ï»¿---
-title: Foundatmental Statistics Theory Notes (9)
+---
+title: Fundatmental Statistics Theory Notes (9)
 date: 2016-09-28 17:36:12
 tags:
  - Probability
- - Statistics
-categories: ç»Ÿè®¡
+categories: Statistics
 ---
 
 
 > Sufficient Statistics
 
-Def $x\_1,x\_2,\dots,x\_n$ are r.v's, and $\theta$ is unknown parameter. The function $T(x\_1,x\_2,\dots,x\_n)$ is a sufficient statistics for $\theta$. If the conditonal distribution of $x\_1,x\_2,\dots,x\_n$ given<!---more---> $T(x\_1,x\_2,\dots,x\_n)$ does not depend on $\theta$.
+Def $x\_1,x\_2,\dots,x\_n$ are r.v's, and $\theta$ is unknown parameter. The function $T(x\_1,x\_2,\dots,x\_n)$ is a sufficient statistics for $\theta$£¬if the conditonal distribution of $x\_1,x\_2,\dots,x\_n$ given<!---more---> $T(x\_1,x\_2,\dots,x\_n)$ does not depend on $\theta$.
 
 To estimate $\theta$, $T(x\_1,x\_2,\dots,x\_n)$ captures all the information about $\theta$ in the sample. Estimation of $\theta$ only depends on $x\_1,x\_2,\dots,x\_n$ through $T(x\_1,x\_2,\dots,x\_n)$.
 
@@ -36,7 +35,7 @@ As $g$ takes care of everything, $\sum x\_i$ is sufficient for $\beta$ by factor
 
 Ex2. Suppose $x\_1,x\_2,\dots,x\_n$ are iid with PDF, $f(x|\theta) = e^{-(x-\theta)},\ \theta \in \mathbb{R}, x > \theta$, find sufficient statistics for $\theta$.
 Joint density $f(x\_1,x\_2,\dots,x\_n|\theta) = \prod\_{i=1}^nf(x\_i|\theta)=\prod\_{i=1}^ne^{-(x\_i - \theta)}$
-$=e^{-\sum x\_i}e^{n\theta}\cdot I(x<min\lbrace x\_i \rbrace) \Leftarrow \theta < min\lbrace x\_i \rbrace$
+$=e^{-\sum x\_i}e^{n\theta}\cdot I(\theta<min\lbrace x\_i \rbrace) \Leftarrow \theta < min\lbrace x\_i \rbrace$
 $=\underbrace{e^{n\theta}I(x<min\lbrace x\_i\rbrace)}\_{g(min\lbrace x\_i\rbrace |\theta)}\cdot \underbrace{e^{-\sum x\_i}}\_{h(x\_1,x\_2,\dots,x\_n)}$
 So $min\lbrace x\_i\rbrace$ is sufficient for $\theta$.
 

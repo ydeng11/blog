@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Learning Note (13)
+---
+title: Fundamental Statistics Learning Note (13)
 date: 2016-10-16 16:58:12
 tags:
  - Probability
- - Statistics
-categories: 统计
+categories: Statistics
 ---
 
 > Confidential Interval
@@ -19,7 +18,7 @@ Two ways to construct CI:
  1. Approximate CIs based on MLE (large $n$)
    - Suppose $\hat \theta$ is the MLE, then
       * $\hat \theta \overset{\text{approx}}\sim N(\theta, \frac{1}{I\_n(\theta)})$
-      * g(\hat \theta) \overset{\text{approx}}\sim N(g(\theta), \frac{[g'(\theta)]^2}{I\_n(\theta)})
+      * $g(\hat \theta) \overset{\text{approx}}\sim N(g(\theta), \frac{[g'(\theta)]^2}{I\_n(\theta)})$
 
 Hence, $\frac{\hat \theta - \theta}{\sqrt{1/I\_n(\theta)}} \overset{\text{approx}}\sim N(0,1)$, $P(-1.96 \leq \frac{\hat \theta - \theta}{\sqrt{1/I\_n(\theta)}} \leq 1.96) = 0.95$
 Equivalently, $\frac{\hat \theta - \theta}{\sqrt{1/I\_n(\theta)}} \geq -1.96 \Rightarrow \hat \theta - \theta \geq -1.96\sqrt{1/I\_n (\theta)} \Rightarrow \theta \leq \hat \theta + 1.96\sqrt{1/I\_n(\theta)}$
@@ -47,7 +46,7 @@ a) $p(Q\leq q)=p(\frac{x\_1}{\beta}\leq q)=p(x\_1\leq q\beta)=\int\_0^{q\beta}\f
 so $Q$ is a pivot as the CDF doesn't depend on $\beta$.
 $Q$ has PDF, $f(q)=\frac{d}{dq}(1-e^{-q})=e^{-q}$ for $q$, so $ Q\sim Expo(1)$.
 
-b) p(a\_1\leq Q \leq a\_2)=0.95
+b) $p(a\_1\leq Q \leq a\_2)=0.95$
 Here, the 0.025 quantiles satisfies $0.025 = \int\_0^{a\_1}e^{-q}dq = 1-e^{-a\_1}\Rightarrow a\_1 = -log(0.975) = 0.0253$
 he 0.975 quantiles satisfies $0.975 = \int\_0^{a\_1}e^{-q}dq = 1-e^{-a\_2}\Rightarrow a\_2 = -log(0.025) = 3.69$
 so $p(0.0253\leq \frac{x\_1}{\beta} \leq 3.69)=0.95$

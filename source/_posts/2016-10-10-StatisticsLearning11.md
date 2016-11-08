@@ -1,25 +1,26 @@
-﻿---
+---
 
-title: Foundamental Statistics Learning Note (11)
+title: Fundamental Statistics Learning Note (11)
 
 date: 2016-10-10 18:33:03
 
 tags:
  - Probability
- - Statistics
-
-categories: 统计
+categories: Statistics
 
 ---
-
 > Rao-Blackwell theorem
 
-Rao-Blackwell Theorem:  <!---more--->Let $\hat \theta$  be an unbiased estimator for $\theta$, and $T$ is the minimal sufficient statistics for $\theta$. Then define $\hat \theta^* = E(\theta|T)$, result is that $E(\hat \theta^*) = \theta$, $Var(\hat \theta^*)=Var(\hat \theta)$
+
+
+Rao-Blackwell Theorem:  <!---more--->Let $\hat \theta$  be an unbiased estimator for $\theta$, and $T$ is the minimal sufficient statistics for $\theta$.
+Then define $$\hat \theta^\* = E(\theta|T)$$
+result is $E(\hat \theta^\*) = \theta$ and $Var(\hat \theta^\*)=Var(\hat \theta)$
 
 Recall: 
 $E(y|x)$ is a r.v, $E(E(y|x))=E(y)$, $Var(y)=E[Var(y|x)]+Var[E(y|x)]$
-$E(\hat \theta^*)=E[E(\hat\theta|T)]=E(\hat \theta)=\theta$, so $\hat \theta^*$ is unbiased.
-$Var(\hat \theta)=E[Var(\hat \theta|T)]+Var[E(\hat \theta|T)]=\underbrace{E[Var(\hat \theta|T)]}\_{\geq 0}+Var(\hat \theta^*) \geq Var(\hat \theta^*)$
+$E(\hat \theta^\*)=E[E(\hat\theta|T)]=E(\hat \theta)=\theta$, so $\hat \theta^\*$ is unbiased.
+$Var(\hat \theta)=E[Var(\hat \theta|T)]+Var[E(\hat \theta|T)]=\underbrace{E[Var(\hat \theta|T)]}\_{\geq 0}+Var(\hat \theta^\*) \geq Var(\hat \theta^\*)$
 
 when is $E(\hat \theta|T)=\hat \theta$? When $\hat \theta$ is a function of $T$.
 Conclude: lowest variance is obtained when $\hat \theta$ is a function of minimal sufficient statistics.

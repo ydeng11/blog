@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Learning Note (12)
+---
+title: Fundamental Statistics Learning Note (12)
 date: 2016-10-12 15:38:00
 tags:
  - Probability
- - Statistics
-categories: 统计
+categories: Statistics
 ---
 
 > Working...

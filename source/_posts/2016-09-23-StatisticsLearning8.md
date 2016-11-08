@@ -1,10 +1,9 @@
-﻿---
-title: Foundamental Statistics Theory Notes (8)
+---
+title: Fundamental Statistics Theory Notes (8)
 date: 2016-09-23 15:27:19
 tags:
- - Statistics
  - Probability
-categories: 统计
+categories: Statistics
 ---
 
 > MLE continued
