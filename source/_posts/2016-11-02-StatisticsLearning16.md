@@ -1,4 +1,4 @@
----
+﻿---
 title: Fundamental Statistics Learning Note(16)
 date: 2016-11-02 18:41:14
 tags:
@@ -29,7 +29,7 @@ Then LR test $\lambda$ is:
 $$\begin{equation}\begin{split}
 \lambda&= \frac{\max\limits\_{\theta=\theta\_0}L(\theta|x\_1,\dots,x\_n)}{\underbrace{\max\limits\_{\theta>0}L(\theta|x\_1,\dots,x\_n)}\_{\text{MLE is }\hat \theta = \bar x}} \\\\
 &=\frac{e^{-n\theta\_0}\theta\_0^{\sum x\_i}/\prod x\_i!}{e^{-n\bar x}\bar x^{\sum x\_i}/\prod x\_i!} \\\\
-& = \underbrace{e^{-n\theta+n\bar x}(\frac{\theta\_0}{\bar x})^{n\bar x}}\_{\text{is actually a value given data}}
+& = \underbrace{e^{-n\theta\_0+n\bar x}(\frac{\theta\_0}{\bar x})^{n\bar x}}\_{\text{is actually a value given data}}
 \end{split}\end{equation}$$
 Though we can't easily tell the distribution of $\lambda$, so approximate $-2log\lambda \overset{\text{approximate}}\sim \chi\_1^2$.
 Then approximate LR test: reject $H\_O$ if $-2log\lambda \geq (1-\alpha)\text{ quantile of }\chi\_1^2$

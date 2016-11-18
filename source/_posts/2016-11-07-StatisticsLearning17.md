@@ -9,15 +9,16 @@ tags:
 Outcomes of hypothesis testing: <!---more--->
 $$H\_O: \theta \in \Omega\_0\text{ vs }H\_A: \theta \in \Omega\_1$$
 $$\begin{matrix}
-& &  Decision \\\\
-& & \text{Accept H\_O} & \text{Reject H\_O/Accept H\_A} \\\\
-Truth & H\_O & \checkmark & \text{type I error} \\\\
-      & H\_A & \text{type II error} & \checkmark
+& &  & Decision & \\
+& & \text{Accept } H\_O && \text{Reject }H\_O\text{/Accept }H\_A \\
+& H\_O & \checkmark && \text{type I error} \\
+Truth \\
+& H\_A & \text{type II error} && \checkmark
 \end{matrix}$$
 
 Let $W$ be a test statistics, and $R$ be the rejection region.
 
-$$\underbrace{p(W\in \mathbb{R}|\theta)}\_{\text{probability reject } H\_O \text{ as a function of }\theta} = \begin{equation}
+$$\underbrace{p(W\in R|\theta)}\_{\text{probability reject } H\_O \text{ as a function of }\theta} = \begin{equation}
   \left\lbrace
    \begin{aligned}
    \text{probability type I error, if }\theta \in \Omega\_O  \\\\
@@ -26,8 +27,8 @@ $$\underbrace{p(W\in \mathbb{R}|\theta)}\_{\text{probability reject } H\_O \text
   \right.
 \end{equation}$$
 
-**Definition:** Given test statistics $W$ and rejection region $R$, the **power function** is $pow(\theta)=p(W\in R|\theta)$, So $\begin{matrix}\text{if }\theta \in \Omega\_0, \text{then ideally } pow(\theta) \text{ is close to } 0 \\
-\text{if }\theta \in \Omega\_1, \text{then ideally } pow(\theta) \text{ is close to } 1
+**Definition:** Given test statistics $W$ and rejection region $R$, the **power function** is $pow(\theta)=p(W\in R|\theta)$, So $\begin{matrix}\text{if }\theta \in \Omega\_O, \text{then ideally } pow(\theta) \text{ is close to } 0 \\
+\text{if }\theta \in \Omega\_A, \text{then ideally } pow(\theta) \text{ is close to } 1
 \end{matrix}$
 
 E.X. Let $X\sim Bin(5,p). H\_O:p\leq 0.5 \text{ vs } H\_A:p>0.5$. Test statistcs: $W = X$. Derive $pow(p)$ for 2 cases:
@@ -35,7 +36,7 @@ E.X. Let $X\sim Bin(5,p). H\_O:p\leq 0.5 \text{ vs } H\_A:p>0.5$. Test statistcs
 Ans: 
 (a) $$\begin{matrix}\begin{split}pow(p) &= P(W=5|p) \\\\
 &= p^5 \end{split}\end{matrix}$$
-(b) $$\begin{matrix}\begin{split}pow(p) &= P(w\geq 4|p) \\\\
+(b) $$\begin{matrix}\begin{split}pow(p) &= P(W\geq 4|p) \\\\
 & = P(W=4) + P(W=5) \\\\
 & = {5 \choose 4}p^4(1-p)+p^5
 \end{split}\end{matrix}$$

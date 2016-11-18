@@ -14,7 +14,7 @@ I am going to summarize the workflow of hypothesis testing including LR test, $\
 2. Determine test statistics $W$ (LR test is commonly used)
 3. Scientist set an acceptable type I error rate ($\alpha$-level)
 4. We use that to set rejection region $R$ to achieve $\alpha=\max\limits\_{\theta\in\Omega\_0}p(W\in R|\theta)$
-5. power analysis: does the test have a high probability to reject $H\_O$ when $H\_A$ is true? i.e. Calculate $pow(\theta)$ for $\theta\in\Omega\_1$
+5. power analysis: does the test have a high probability to reject $H\_O$ when $H\_A$ is true? i.e. Calculate $pow(\theta)$ for $\theta\in\Omega\_O$
 6. Calculate p-value once we have data (smallest level $\alpha$ at which $H\_O$ would be rejected)
 
 E.X. $X\sim Expo(\beta), H\_O:\beta\leq 1\text{ vs }H\_A:\beta >1$, test statistics $W=X$.
