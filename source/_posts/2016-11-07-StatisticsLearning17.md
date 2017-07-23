@@ -9,11 +9,11 @@ tags:
 Outcomes of hypothesis testing: <!---more--->
 $$H\_O: \theta \in \Omega\_0\text{ vs }H\_A: \theta \in \Omega\_1$$
 $$\begin{matrix}
-& &  & Decision & \\
-& & \text{Accept } H\_O && \text{Reject }H\_O\text{/Accept }H\_A \\
-& H\_O & \checkmark && \text{type I error} \\
-Truth \\
-& H\_A & \text{type II error} && \checkmark
+\text{}& \text{} & \text{} & Decision & \text{} \\\\
+\text{}& \text{} & \text{Accept } H\_O & \text{} & \text{Reject }H\_O\text{/Accept }H\_A \\\\
+\text{}& H\_O & \checkmark & \text{} & \text{type I error} \\\\
+Truth & \text{} & \text{} & \text{} &\text{}\\\\
+\text{}& H\_A & \text{type II error} & \text{} & \checkmark
 \end{matrix}$$
 
 Let $W$ be a test statistics, and $R$ be the rejection region.

@@ -48,7 +48,7 @@ $Q$ has PDF, $f(q)=\frac{d}{dq}(1-e^{-q})=e^{-q}$ for $q$, so $ Q\sim Expo(1)$.
 
 b) $p(a\_1\leq Q \leq a\_2)=0.95$
 Here, the 0.025 quantiles satisfies $0.025 = \int\_0^{a\_1}e^{-q}dq = 1-e^{-a\_1}\Rightarrow a\_1 = -log(0.975) = 0.0253$
-he 0.975 quantiles satisfies $0.975 = \int\_0^{a\_1}e^{-q}dq = 1-e^{-a\_2}\Rightarrow a\_2 = -log(0.025) = 3.69$
+he 0.975 quantiles satisfies $0.975 = \int\_0^{a\_2}e^{-q}dq = 1-e^{-a\_2}\Rightarrow a\_2 = -log(0.025) = 3.69$
 so $p(0.0253\leq \frac{x\_1}{\beta} \leq 3.69)=0.95$
 $\Rightarrow p(\frac{x\_1}{3.69}\leq \beta \frac{x\_1}{0.0253})=0.95$
 $\Rightarrow CI = (\frac{x\_1}{3.69}, \frac{x\_1}{0.0253})$

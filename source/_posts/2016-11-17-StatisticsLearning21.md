@@ -8,9 +8,9 @@ categories: Statistics
 
 > Maximum A Posterior
 
-**Definition**: The maximum a posterior (MAP) estimate is the value $\theta$ that maximize $\pi(\theta | x\_1,\dots,x\_n)d\theta$.
+**Definition**: The maximum a posterior (MAP) estimate is the value $\theta$ that maximize $\pi(\theta | x\_1,\dots,x\_n)$. Using the posterior $\pi(\theta|x\_1,\dots,x)$, we can calculate $p(a\leq \theta\leq b|x\_1,\dots,x\_n)=\int_a^b\pi(\theta|x_1,\dots,x_n)d\theta$
 <!---more--->
-$Beta$ distribution has PDF, $f(x) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}x^{\alpha-1}(1-x)^{\beta-1}$, for $0\leq x\leq 1$, parameters $\alpha>0,\ \beta>0$. $Beta(\alpha,\beta)$ is commonly used prior for binomial probability.
+$Beta$ distribution has PDF, $f(x) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)^{\beta-1}$, for $0\leq x\leq 1$, parameters $\alpha>0,\ \beta>0$. $Beta(\alpha,\beta)$ is commonly used prior for binomial probability.
 
 e.g. Suppose the prior $Beta(3,6)$ can represent the fraction of canandians who can speak French as shown below.
 
@@ -21,7 +21,7 @@ Using the prior $p\sim Beta(2,6)$,
 ![](http://oc82vc8fw.bkt.clouddn.com/beta\_2\_6.png)
 $$\begin{equation}\begin{split}
 \pi(p|x\_1,\dots,x\_n) & \propto f(x\_1,\dots,x\_n)\pi(p) \\\\
-& = p(1-p)^9\frac{\Gamma(2)\Gamma(6)}{\Gamma(8)}p^{2-1}(1-p)^{6-1} \\\\
+& = p(1-p)^9\frac{\Gamma(8)}{\Gamma(2)\Gamma(6)}p^{2-1}(1-p)^{6-1} \\\\
 & \propto p^2(1-p)^{14} 
 \end{split}\end{equation}$$
 Which has the form of $Beta(3,15)$.
@@ -31,7 +31,7 @@ Ex1 Beta-Binomial
 prior probability: $p\sim Beta(\alpha,\beta)$; likelihood function: $x\sim Bin(n,p)$, suppose we observe $X=x$. Then posterior probability: 
 $$\begin{equation}\begin{split}
 \pi(p|x) & \propto \underbrace{f(x|p)}\_{\text{ likelihood }}\underbrace{\pi(p)}\_{\text{ prior }} \\\\
-& = {n \choose x}p^x(1-p)^{n-x} \cdot \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}p^{\alpha-1}(1-p)^{\beta-1}\\\\
+& = {n \choose x}p^x(1-p)^{n-x} \cdot \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}p^{\alpha-1}(1-p)^{\beta-1}\\\\
 & \propto p^{\alpha+x-1}(1-p)^{n-x+\beta-1}
 \end{split}\end{equation}$$
 

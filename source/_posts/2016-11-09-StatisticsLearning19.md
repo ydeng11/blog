@@ -21,10 +21,10 @@ Case II: 100 of them actually work
 1. For how many drugs do we expect $H\_O$ to be rejected?
 Ans: Here we use the fact that we can achive $90\%$ power for the test if $H\_O$ is false, which means we could correctly reject $H\_O$ by $90\%$ when $H\_O$ is false. 
 $$\begin{matrix}
-  & \text{reject } H\_O & \text{accept } H\_O & \text{Total} \\
+\text{}  & \text{reject } H\_O & \text{accept } H\_O & \text{Total} \\
 \text{work} & 90 & 10 & 100 \\
 \text{doesn't wrok} & 45 & 855 & 900 \\
- & 135 & 865
+\text{} & 135 & 865 & \text{}
 \end{matrix}$$
 2. What is $p(H\_O\ is\ true)$ among drugs where $H\_O$ is rejected?
 Ans: It is $\frac{45}{135}=\frac{1}{3}$
